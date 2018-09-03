@@ -18,7 +18,7 @@
     chat.getUpdate(function(data) {
       data = JSON.parse(data)["log"];
       $("#log").html("");
-      for(i = 0; i < data.length; i++) {
+      for(i = data.length-1; i > -1; i--) {
         $('#log').append("<p>" +data[i]['author'] + "<br>" + data[i]['message'] + '<p>');
       }
     });
