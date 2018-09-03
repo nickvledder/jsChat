@@ -1,0 +1,25 @@
+label, input, button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+} 
+#log {
+    resize: none;
+    width: 500px;
+    height: 500px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+input {
+    width: 500px;
+    height: 50px;
+}
+#send {
+    float: left;
+}
+#logout {
+    float: right;
+}
