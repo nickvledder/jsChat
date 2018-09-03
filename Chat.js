@@ -63,7 +63,7 @@ class Chat {
    * @param message 
    * @param func
    */
-  send(username, message, func=function(){}) {
+  send(username, message, datetime,func=function(){}) {
     $.ajax({
       type: 'POST',
       url: this.url,
@@ -72,6 +72,7 @@ class Chat {
         'file': this.file,
         'user': username,
         'msg': message,
+        'datetime' : datetime,
       }
     })
       .done(function() {
