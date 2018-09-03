@@ -72,6 +72,7 @@ class Chat {
         'file': this.file,
         'user': username,
         'msg': message,
+        'datetime' : datetime,
       }
     })
       .done(function() {
