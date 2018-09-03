@@ -1,6 +1,7 @@
 (function() {
   
-  let username   
+  let username;
+  var datetime; 
   const chat = new Chat();
 
   if( !(localStorage['username']) ) {
@@ -26,7 +27,8 @@
   setInterval(update, 1000);
 
   $("#send").on('click', function(e) {
-    chat.send(username, $("#chat").val());
+    datetime = new Date();
+    chat.send(username, $("#chat").val(), datetime.getFullYear() + '/' + datetime.getMonth() + '/' + datetime.getDate() + ' ' + datetime.getHours() +  ':' + datetime.getMinutes() +  ' ' + datetime.getSeconds() + 's');
   });
   
   $("#logout").on('click', function(e) {
