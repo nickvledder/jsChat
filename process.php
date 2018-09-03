@@ -6,6 +6,7 @@
     $file       = $_POST['file'];
     $user       = $_POST["user"];
     $msg        = $_POST["msg"];
+    $datetime   = $_POST["datetime"];
     $state      = $_POST["state"];
     $contexts   = $_POST["data"];
     $count      = 0;
@@ -43,7 +44,8 @@
                 $json = json_decode($file_con, true);
                 $array = array(
                     "author" => $user,
-                    "message" => $msg
+                    "message" => $msg,
+                    "datetime" => $datetime
                 );
                 array_push($json["log"], $array);
                 $final_data = json_encode($json);
